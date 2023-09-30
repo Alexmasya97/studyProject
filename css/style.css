@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url("Fonts/PT_Sans/PTSans-Regular.woff2") format("woff2"),
+         url("Fonts/PT_Sans/PTSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "PT Sans";
+    src: url("Fonts/PT_Sans/PTSans-Bold.woff2") format("woff2"),
+         url("Fonts/PT_Sans/PTSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+  /* variables at rest*/
+  :root {
+    --basic-black:#000000;
+    --dark-gray:#333333;
+    --white: #FFFFFF;
+    --light-blue: #81B3D2;
+    --brown: #766357;
+    --beige: #F2F2F2;
+    --logo: #231F20;
+  
+
+/* variables hover*/
+
+--hover-brown: #604E43;
+--hover-blue: #669EC0;
+
+/* variables by click */
+
+--click-brown: #503E33;
+--click-blue: #5496BD;
+--click-logo:#BDBBBC;
+
+}
+  
+  body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--beige);
+    background-position: top center;  
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-header {
+    color: var(--white);
+    width: 1200px;
+    height:70px;
+
+}
+
+.main-header-logo {
+   
+}
+
+.main-navigation {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    background-color: transparent;
+    font-weight: 700;
+  }
