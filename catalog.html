@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Выбор жилья</title>
+    <title>Гостиницы</title>
+    <link rel="icon" href="./image/favicon/32.ico">
+    <link rel="icon" href="./image/favicon/32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./image/favicon/152.png">
+    <link rel="stylesheet" href="./css/Normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <header>
+<body class="container">
+    <!-- <header class="catalog-header">
         <a href="index.html">
             <img src="image/logo.svg" width="138" height="70"  alt="Логотип города «Sedona»">
         </a>
@@ -16,16 +21,16 @@
                 <li><a href="index.html">Информация</a></li>
                 <li><a href="blank.html">Фото и видео</a></li>
                 <li><a href="blank.html">Карта штата</a></li>
-                <li><a href="catalog.html">Гостиницы</a></li>
+                <li><a>Гостиницы</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <section>
+    </header> -->
+    <main class="main-catalog">
+        <section class="choosing">
             <h1>Каталог</h1>
-            <img src="image/backgroundBLUR.png" width="1200" height ="217" alt="Фон города">
-            <form action="#" method="get">
-                <fieldset>
+            <!-- <img src="image/backgroundBLUR.png" width="1200" height ="217" alt="Фон города"> -->
+            <form action="#" method="get" >
+                <fieldset class="infrostructure">
                     <legend>Инфраструктура:</legend>
                     <ul>
                         <li>
@@ -45,7 +50,7 @@
                     </ul>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="type-house">
                     <legend>Тип жилья:</legend>
                     <ul>
                         <li>
@@ -65,7 +70,7 @@
                     </ul>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="price">
                     <legend>Стоимость в сутки (Р):</legend>
 
                     <input type="range" min="0" max="3000" id="rating">
@@ -75,9 +80,9 @@
                 </fieldset>
             </form>
         </section>
-        <section>
+        <section class="list-result">
             <h2>Список жилья</h2>
-            <ul>
+            <ul class="result">
                 <li>
                     <a href="hotel.html">
                         <h3>Amara Resort & Spa</h3>   
@@ -113,7 +118,7 @@
                     <img src="image/VillasatPocoDiablo.png" width="135" height ="90" alt="Villas at Poco Diablo">
                     <p>
                         <span>Апартаменты</span>
-                        <span>От 2000 Р.</span>
+                        <span>От 2000 р</span>
                         <span>Рейтинг: 9,2</span>
                     </p>
                     <a href="#">Подробнее</a>
@@ -124,7 +129,7 @@
         </section>
 
     </main>
-    <footer>
+    <!-- <footer>
         <section>
             <h2>#VISITSEDONA <br>
                 ТЕЛ: +7(495) 666-01-66
@@ -146,7 +151,7 @@
                 </a>
             </p>
         </section>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
