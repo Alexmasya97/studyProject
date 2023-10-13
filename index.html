@@ -13,25 +13,31 @@
 </head>
 
 <body class="container">
-    <!-- <header class="main-header">
+
+    <header class="main-header">
         <a class="main-header-logo">
-            <img src="image/logo.svg" width="138" height="70" alt="Логотип города «Sedona»">
+            <img src="./image/logo.svg" width="138" height="70" alt="Логотип города «Sedona»">
         </a>
         <nav class="main-header-nav">
-            <ul>
-                <li class="header-nav-left"><a>Информация </a></li>
-                <li class="header-nav-left"><a href="blank.html">Фото и видео </a></li>
-                <li class="header-nav-right"><a href="blank.html">Карта штата </a></li>
-                <li class="header-nav-right"><a href="catalog.html">Гостиницы </a></li>
+            <ul class="nav_items">
+                <div class="header-nav-left">
+                    <li class="header-item"><a>Информация </a></li>
+                    <li class="header-item"><a href="blank.html">Фото и видео </a></li>
+                </div>
+                <div class="header-nav-right">
+                    <li class="header-item"><a href="blank.html">Карта штата </a></li>
+                    <li class="header-item"><a href="catalog.html">Гостиницы </a></li>
+                </div>
             </ul>
         </nav>
-    </header> -->
+    </header>
+
 
 
     <main>
 
         <section class="back-picture">
-            <h1> Sedona - город в Аризоне</h1>
+            <h1 class="visually-hidden"> Sedona - город в Аризоне</h1>
             <div class="big-photo">
                 <div class="welcome">
                     <img src="image/welcome.svg" width="456" height="333" alt="">
@@ -48,7 +54,7 @@
 
         <section class="photo-reason">
             <div class="true-city">
-                <h2 class="heading">Настоящий <br> городок</h2>
+                <h2 class="heading bold">Настоящий <br> городок</h2>
                 <p class="number"> — №1 — </p>
                 <p class="common-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
@@ -61,17 +67,17 @@
             <h2 class="visually-hidden">Услуги</h2>
             <ul class="service-list">
                 <li class="item">
-                    <h3>Жильё</h3>
+                    <h3 class="bold">Жильё</h3>
                     <p class="service-item_text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
 
                 <li class="item">
-                    <h3>Еда</h3>
+                    <h3 class="bold">Еда</h3>
                     <p class="service-item_text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
 
                 <li class="item">
-                    <h3>Сувениры</h3>
+                    <h3 class="bold">Сувениры</h3>
                     <p class="service-item_text">Не только китайского, но и местного производства!</p>
                 </li>
             </ul>
@@ -80,9 +86,9 @@
         <section class="photo-reason2">
             <div class="bridge-photo">
                 <img src="image/devilBridge.png" width="800" height="256" alt="Мост дьявола">
-            </div> 
+            </div>
             <div class="bridge">
-                <h2 class="heading">Там есть <br> Мост дьявола</h2>
+                <h2 class="heading bold">Там есть <br> Мост дьявола</h2>
                 <p class="number"> — №2 — </p>
                 <p class="common-text"> Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
@@ -92,19 +98,19 @@
             <h2 class="visually-hidden">Остальные причины</h2>
             <ul class="reasons">
                 <li class="item">
-                    <h3>небольшая <br> площадь</h3>
+                    <h3 class="bold">небольшая <br> площадь</h3>
                     <p class="number"> — №3 — </p>
                     <p class="reasons-item_text">все достопримечательности находятся очень близко</p>
                 </li>
 
                 <li class="item">
-                    <h3>красивая <br> дорога</h3>
+                    <h3 class="bold">красивая <br> дорога</h3>
                     <p class="number"> — №4 — </p>
                     <p class="reasons-item_text">ехать в седону из лас-вегаса совсем не скучно!</p>
                 </li>
 
                 <li class="item">
-                    <h3>мало <br> туристов</h3>
+                    <h3 class="bold">мало <br> туристов</h3>
                     <p class="number"> — №5 — </p>
                     <p class="reasons-item_text">большинство едет в гранд каньон <br> и толпится там</p>
                 </li>
@@ -135,26 +141,48 @@
     </main>
     <footer class="main-footer">
         <section class="contact">
-            <h2>#VISITSEDONA <br>
-                Тел: <a class="footer-phone bold" href="tel:+74956660166">+7 (495) 666-01-66</a>
-            </h2>
+            <h2 class="visually-hidden"> VISITSEDONA </h2>
+            <p class="bold"> #VISITSEDONA</p>
+            <p class="footer-phone bold">
+                Тел: <a href="tel:+74956660166">+7(495) 666-01-66</a>
+            </p>
+
+
         </section>
         <section class="social">
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul>
-                <li class="social-button"><a href="#">Вконтакте</a></li>
-                <li class="social-button"><a href="#">Фейсбук</a></li>
-                <li class="social-button"><a href="#">Инстаграм</a></li>
+                <li>
+                    <a class="social-button" href="#">
+                        <span class="visually-hidden">Twitter</span>
+                        <img src="./image/twitter.svg" width="17" height="17" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-button" href="#">
+                        <span class="visually-hidden">Facebook</span>
+                        <img src="./image/fb-icon.svg" width="12" height="22" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-button" href="#">
+                        <span class="visually-hidden">Youtube</span>
+                        <img src="./image/youtube.svg" width="20" height="16" alt="Youtube">
+                    </a>
+                </li>
             </ul>
         </section>
+
         <section class="copyright">
             <h2 class="visually-hidden">created by</h2>
-            <p>Website by
-                <a href="https://htmlacademy.ru/intensive/htmlcss">
-                    <img src="image/logo-htmlacademy.svg" width="115" height="41" alt="Логотип «HTML Academy»">
-                </a>
-            </p>
+            <p>Website by </p>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+                <img src="image/logo-htmlacademy.svg" width="115" height="41" alt="Логотип «HTML Academy»">
+            </a>
+
         </section>
+
+
     </footer>
 </body>
 
