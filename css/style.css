@@ -32,6 +32,7 @@
 
    --hover-brown: #604E43;
    --hover-blue: #669EC0;
+   --hover-beige: #EBEBEB;
 
    /* variables by click */
 
@@ -99,6 +100,8 @@
  .container {
    width: 1200px;
    margin: 0 auto;
+   box-shadow: 0 0px 30px gray;
+
  }
 
  /*+++++++++++++++++++++++++++++ HEADER +++++++++++++++++++++++++++++++++++++++*/
@@ -119,20 +122,7 @@
   display: flex;
   flex-wrap: wrap;
   width:100%;
-}
-
-.header-nav-left {
-  display:flex;
-  flex-wrap:wrap;
-  width:50%;
-}
-
-.header-nav-right{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: end;
-  width:50%;
-     
+  margin: auto;
 }
 
 .main-header-logo {
@@ -140,19 +130,26 @@
   position: absolute;
 } 
 
-.header-item {
-  display:block;
-  padding-right: 137px;
+.header-item-left {
+  margin-right: 137px;
+  flex-grow: 1;
+}
+.header-item-right {
+  margin-left: 137px;
+  flex-grow: 1;
+}
+
+.header-item-right:last-child {
+  margin-right: 0;
+}
+
+.header-item-right {
+  text-align: end;
 }
 
 .nav_element:hover {
   color: var(--light-blue);
 }
-
-.nav_items li:last-child {
-  padding-right: 0;
-} 
-
 
  /* ++++++++++++++++++++++++++++++   MAIN   +++++++++++++++++++++++++++++++++++++ */
 .back-picture {
@@ -161,6 +158,7 @@
 
 .big-photo {
   background: url(../image/backgroundPhoto.jpg) no-repeat;
+  object-fit: contain;
 }
 
 .welcome {
@@ -288,6 +286,17 @@
   margin-top: 23px;
 }
 
+.pop {
+  text-align: center;
+  background-color: var(--white);
+  padding: 58px 0 130px;
+  
+}
+
+.pop_text {
+  margin-top: 25px;
+}
+
 .map {
   display: grid;
 }
@@ -360,6 +369,123 @@ a {
 
 .copyright:active path {
   fill: var(--click-logo);
+}
+
+/* +++++++++++++++++++++++++++++   MODAL ++++++++++++++++++++++++++++++++++++++++++ */
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 568px;
+  box-shadow: 0 0px 30px gray;
+  position: fixed;
+  top: 2000px;
+  bottom: auto;
+  left:1730px
+
+}
+
+.modal-heading {
+  background-color: var(--brown);
+  text-align: center;
+  padding: 30px 0;
+  color:var(--white)
+}
+
+.modal-book {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 26px 50px 55px;
+  text-transform: uppercase;
+  font-weight: 700;
+ } 
+
+.modal-book-item {
+  margin-top: 29px;
+  display: flex;
+}
+
+.modal-book-item label {
+  padding: 6px 0;
+  width: 118px;
+}
+
+.modal-book-item input {
+  background-color: #F2F2F2;
+  padding: 6px 13px;
+  flex-grow: 1;
+  box-sizing: border-box;
+  border:none;
+  text-transform: inherit;
+  font-weight: inherit;
+}
+
+.btn-plus:hover,
+.btn-minus:hover,
+.modal-book-item input:hover {
+background-color: var(--hover-beige);
+}
+
+.modal-book-item input:focus {
+  background-color: var(--white);
+}
+
+.modal-book-item input::placeholder {
+  color:inherit ;
+}
+
+.modal-book-item input[id="adults"],
+.modal-book-item input[id="kids"] {
+  width: 34px;
+  text-align: center;
+}
+
+.calendar {
+    background-image: url("../image/calendar.svg");
+    background-position: 315px 50%;
+    background-size: 21px;
+   background-repeat: no-repeat;
+}
+
+.btn-plus {
+  cursor: pointer;
+  width: 40px;
+  border: 0;
+  background: var(--beige);
+}
+
+.btn-minus {
+  cursor: pointer;
+  width: 40px;
+  border: 0;
+  background: var(--beige);  
+}
+.calendar,
+.btn-plus,
+.btn-minus:hover path {
+fill:var(--basic-black);
+}
+
+.label-kids {
+  text-align: center;
+}
+
+.half_detail {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+ 
+}
+
+.search {
+  background-color: var(--active-blue) !important;
+  color: var(--white);
+  margin-top: 29px;
+  padding: 16px 0 ;
+  border: none;
+  text-transform: uppercase;
 }
 
  /* ++++++++++++++++++++++++++++++++++++CATALOG +++++++++++++++++++++++++++++++=++*/
@@ -507,6 +633,7 @@ a {
 
 .price-controls {
  border: 2px solid #ffffff; 
+ border-radius: 2px;
  
 }
 
@@ -533,6 +660,7 @@ a {
   padding: 7px 30px 8px 30px;
   text-transform: inherit;
   align-self: center;
+  border-radius: 2px;
  
 }
 
@@ -568,7 +696,7 @@ a {
 }
 
 .bar_item {
-  padding-right: 32px;
+  margin-right: 32px;
 }
 
 .triangle {
@@ -580,7 +708,6 @@ a {
 
 .result_item {
   display: flex;
-  flex-wrap: wrap;
   padding: 30px 73px;
   gap:29px;
 }
@@ -588,6 +715,7 @@ a {
 .hotel_photo {
   width:135px;
   height:90px;
+  object-fit: contain;
 }
 
 .hotel_info{
@@ -675,6 +803,7 @@ a {
   background-color: var(--beige);
   padding: 3px 15px;
   order:1;
+  min-width: 93px;
 }
 
 .rating {
