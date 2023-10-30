@@ -17,7 +17,7 @@ searchHotel .addEventListener("click", function (evt) {
 });
 
 popUp.addEventListener("submit",function(evt) {
-  if(!adults.value || !kids.value){
+  if(!!adults.value && !!kids.value){
     evt.preventDefault();
     popUp.classList.add("modal-error");
     console.log("Введите кол-во взрослых и детей");

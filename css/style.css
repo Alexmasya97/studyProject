@@ -539,7 +539,7 @@ fill:var(--basic-black);
     transform: translateX(10px);
   }
 }
-.modal-errow {
+.modal-error {
   animation-name: shake;
   animation-duration: 0.6s;
 }
