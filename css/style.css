@@ -290,6 +290,7 @@
   text-align: center;
   background-color: var(--white);
   padding: 58px 0 130px;
+  position: relative;
   
 }
 
@@ -377,22 +378,30 @@ a {
   display: flex;
   flex-direction: column;
   width: 568px;
-  box-shadow: 0 0px 30px gray;
-  position: fixed;
-  top: 2000px;
-  bottom: auto;
-  left:1730px
-
+  
+  position: absolute;
+  top:195px;
+  right:316px;
 }
 
-.modal-heading {
+.modal-link {
   background-color: var(--brown);
   text-align: center;
   padding: 30px 0;
-  color:var(--white)
+  color:var(--white);
+  border: none;
 }
 
-.modal-book {
+.modal-link:hover {
+  background-color: var(--hover-brown);
+}
+
+.modal-link:active {
+ color: rgb(255, 255, 255,0.3);
+ background-color: var(--click-brown);
+}
+
+.modal-book-show {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -400,7 +409,14 @@ a {
   padding: 26px 50px 55px;
   text-transform: uppercase;
   font-weight: 700;
+  box-shadow: 0 0px 30px gray;
  } 
+
+ .modal-book {
+  display: none;
+ }
+
+
 
 .modal-book-item {
   margin-top: 29px;
@@ -422,14 +438,20 @@ a {
   font-weight: inherit;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .btn-plus:hover,
 .btn-minus:hover,
 .modal-book-item input:hover {
-background-color: var(--hover-beige);
+  background-color: var(--hover-beige);
 }
 
 .modal-book-item input:focus {
   background-color: var(--white);
+  outline: var(--beige) 2px solid;
 }
 
 .modal-book-item input::placeholder {
@@ -443,10 +465,10 @@ background-color: var(--hover-beige);
 }
 
 .calendar {
-    background-image: url("../image/calendar.svg");
-    background-position: 315px 50%;
-    background-size: 21px;
-   background-repeat: no-repeat;
+  background-image: url("../image/calendar.svg");
+  background-position: 315px 50%;
+  background-size: 21px;
+  background-repeat: no-repeat;
 }
 
 .btn-plus {
@@ -480,13 +502,49 @@ fill:var(--basic-black);
 }
 
 .search {
-  background-color: var(--active-blue) !important;
+  background-color: var(--light-blue);
   color: var(--white);
   margin-top: 29px;
   padding: 16px 0 ;
   border: none;
   text-transform: uppercase;
 }
+
+.search:hover {
+  background-color: var(--hover-blue);
+}
+
+.search:active {
+  background-color: var(--active-blue);
+  color: rgb(255, 255, 255,0.3);
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+.modal-errow {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+
 
  /* ++++++++++++++++++++++++++++++++++++CATALOG +++++++++++++++++++++++++++++++=++*/
 
